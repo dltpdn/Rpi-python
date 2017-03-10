@@ -1,7 +1,8 @@
-# -*- coding:utf-8 -*-
 
 print type(1)
+print type(12L)
 print type(3.14)
+print type(3 + 2j)
 print type(True)
 print type(False)
 print type("a")

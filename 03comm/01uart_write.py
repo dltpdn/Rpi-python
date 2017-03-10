@@ -8,6 +8,6 @@ try:
     while True:
         line = raw_input(">")
         print line
-        port.write(line + '\r')
+        port.write(line + '\n\r')
 finally:
-    port.close()
+    port.close() 

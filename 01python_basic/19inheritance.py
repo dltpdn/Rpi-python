@@ -1,27 +1,32 @@
-class Car(object):
-    engine =None
+class Base:
 
-    def __init__(self, engine):
-        self.engine = engine
+    def __init__(self):
+        self.name = "base"
 
-    def drive(self):
-        if self.engine ==None:
-            print"can't drive caused by no engine"
-        else:
-            print'driving..'
+    def show(self):
+        print self.name
 
+class Derived(Base):
+    def __init__(self):
+        Base.__init__(self)
 
-class SuperCar(Car):
-    def __init__(self, engine):
-        super(SuperCar, self).__init__(engine)
-        #Car.__init__(self, engine)
-    def driveFast(self):
-        print'driving fast very much...'
+base = Base()
+base.show()
+derived = Derived()
+derived.show()
 
+class Base2(object):
+    def __init__(self):
+        self.name = "Base2"
 
-car = Car(2)
-car.drive()
+    def show(self):
+        print self.name
 
-scar = SuperCar(3)
-scar.drive()
-scar.driveFast()
+class Derived2(Base2):
+    def __init__(self):
+        super(Derived2, self).__init__()
+
+base2 = Base2()
+base2.show()
+derived2 = Derived2()
+derived2.show()

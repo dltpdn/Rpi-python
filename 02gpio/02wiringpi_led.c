@@ -4,7 +4,6 @@
 
 #define LED 1 // BCM18
 int main( void) {
-        puts("!!!Hello wiringPi!!!" ); /* prints !!!Hello World!!! */
         int i;
 
         wiringPiSetup();
