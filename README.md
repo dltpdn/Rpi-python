@@ -32,6 +32,3 @@
 * [Arduino](https://www.arduino.cc/en/Main/Software)
 * [OpenCV](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
 
-## Links
-* (https://learn.adafruit.com/dht/overview)
- * (https://github.com/adafruit/Adafruit_Python_DHT.git)

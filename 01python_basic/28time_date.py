@@ -9,3 +9,4 @@ print today.year, today.month, today.day, today.weekday()
 
 today = datetime.datetime.today()
 print today.year, today.month, today.hour, today.minute
+
