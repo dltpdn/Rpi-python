@@ -32,3 +32,5 @@
 * [Arduino](https://www.arduino.cc/en/Main/Software)
 * [OpenCV](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
 
+## Wiki
+* (https://github.com/dltpdn/rpi_edu/wiki)
