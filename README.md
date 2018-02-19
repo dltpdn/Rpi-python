@@ -35,7 +35,7 @@
 ## 수업 자료
 * [Installation](https://www.slideshare.net/secret/yqviIDU5S8HD2O)
 * [Linux Basic](https://www.slideshare.net/secret/pIZuEqfYHlFaCQ)
-* [Linux File System](https://www.slideshare.net/secret/rwImJHdmfwyEtT)
+* [Linux File System](https://www.slideshare.net/secret/J8sa5SkTBEoCES)
 
 ## Wiki
 * (https://github.com/dltpdn/rpi_edu/wiki)
