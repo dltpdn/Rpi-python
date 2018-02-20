@@ -32,5 +32,10 @@
 * [Arduino](https://www.arduino.cc/en/Main/Software)
 * [OpenCV](https://sourceforge.net/projects/opencvlibrary/files/opencv-win/3.2.0/opencv-3.2.0-vc14.exe/download)
 
+## 수업 자료
+* [Installation](https://www.slideshare.net/secret/yqviIDU5S8HD2O)
+* [Linux Basic](https://www.slideshare.net/secret/pIZuEqfYHlFaCQ)
+* [Linux File System](https://www.slideshare.net/secret/7kdZUBA81OwuXe)
+
 ## Wiki
 * (https://github.com/dltpdn/rpi_edu/wiki)
