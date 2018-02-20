@@ -9,14 +9,14 @@ while True:
     conn, addr = sock.accept()
     req = ''
     while True:
-        req += conn.recv(1024)
+        req += conn.recv(1024).decode('utf-8')
         if req.endswith('\r\n\r\n'):
             req_line = req.split('\r\n')[0]
             print(req_line)
             method, url, ver = req_line.split()
             print(url)
             break
-    conn.send("HTTP/1.1 200 OK\nContent-Type:text/html\n\n<h1>Welocome to My server</h1>\n")
+    conn.send(b"HTTP/1.1 200 OK\nContent-Type:text/html\n\n<h1>Welocome to My server</h1>\n")
     conn.close()
 sock.close()      
       

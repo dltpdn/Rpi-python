@@ -8,12 +8,12 @@ read = socket.recv(1024)
 print('server:', read)
 
 while True:
-    str = input(">")
-    if str == "exit":
+    msg = input(">")
+    if msg == "exit":
         break
     read = socket.recv(1024)
-    print('server:', read)
-    socket.send(str+"\n")
+    print('server:', read.decode('utf-8'))
+    socket.send( (msg+"\n").encode('utf-8'))
     
 socket.close()
 

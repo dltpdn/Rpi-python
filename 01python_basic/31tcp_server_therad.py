@@ -7,7 +7,7 @@ running = True
 def recv():
     while running:
         read = conn.recv(1024)
-        print('client:', read)
+        print('client:', read.decode('utf-8'))
 
 try:
     server = socket(AF_INET, SOCK_STREAM)
@@ -18,13 +18,13 @@ try:
     conn, addr = server.accept()
     th = threading.Thread(target=recv)
     th.start()
-    conn.send('Welcome to python tcp server.')
+    conn.send(b'Welcome to python tcp server.')
     
     while running:
-        str = input(">")
-        if str == "exit":
+        msg = input(">")
+        if msg == "exit":
             break
-        conn.send(str+"\n")
+        conn.send( (msg+"\n").encode('utf-8'))
     
     conn.close()
 finally:

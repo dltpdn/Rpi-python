@@ -6,20 +6,20 @@ running = True
 def recv():
     while running:
         read = socket.recv(1024)
-        print('client:', read)
+        print('client:', read.decode('utf-8'))
 
 try:
     socket = socket(AF_INET, SOCK_STREAM)
     socket.connect(('', 1234))
     th = threading.Thread(target=recv)
     th.start()
-    socket.send('Hi! This is a client.')
+    socket.send(b'Hi! This is a client.')
     
     while running:
-        str = input(">")
-        if str == "exit":
+        msg = input(">")
+        if msg == "exit":
             break
-        socket.send(str+"\n")
+        socket.send( (msg+"\n").encode('utf-8'))
         
     socket.close()
 finally:

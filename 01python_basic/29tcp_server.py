@@ -8,14 +8,14 @@ server.listen(1)
 print("server listening on 1234...")
 conn, addr = server.accept()
 
-conn.send('Welcome to python tcp server.')
+conn.send(b'Welcome to python tcp server.')
 while True:
-    str = input(">")
-    if str == "exit":
+    msg = input(">")
+    if msg == "exit":
         break
-    conn.send(str+"\n")
+    conn.send( (msg+"\n").encode('utf-8'))
     read = conn.recv(1024)
-    print('client:', read)
+    print('client:', read.decode('utf-8'))
     
 conn.close()
 
