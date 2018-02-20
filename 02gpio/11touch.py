@@ -11,6 +11,6 @@ while True:
 
     if pad_pressed:
         current_datetime = datetime.datetime.now().strftime("%I:%M%p:%S on %B %d, %Y")
-        print("pressed! - " + current_datetime)
+        print(("pressed! - " + current_datetime))
 
     time.sleep(0.1)

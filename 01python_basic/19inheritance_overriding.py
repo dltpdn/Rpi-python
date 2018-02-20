@@ -1,12 +1,12 @@
 class A:
     def __init__(self):
-        print 'A.__init__()'
+        print('A.__init__()')
     def method(self):
-        print 'method A'
+        print('method A')
 
 class B(A):
     def method(self):
-        print 'method B'
+        print('method B')
         
 a = A()
 b = B()

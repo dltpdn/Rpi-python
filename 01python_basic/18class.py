@@ -4,7 +4,7 @@ class Person:
         self.age = age
     
     def sayHello(self):
-        print 'Hello! I am %s, %d years old' % (self.name, self.age)
+        print('Hello! I am %s, %d years old' % (self.name, self.age))
         
     def set_age(self, age):
         self.age = age
@@ -14,6 +14,6 @@ kim = Person('Kim', 23)
 lee.sayHello()
 kim.sayHello()
 lee.set_age(30)
-print lee.name, lee.age
-print type(lee), lee.__class__.__name__
-print isinstance(lee, Person)
+print(lee.name, lee.age)
+print(type(lee), lee.__class__.__name__)
+print(isinstance(lee, Person))

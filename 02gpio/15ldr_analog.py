@@ -26,5 +26,5 @@ def analog_read():
 
 
 while True:
-    print  analog_read()
+    print(analog_read())
     #time.sleep(1)

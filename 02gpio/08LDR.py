@@ -10,5 +10,5 @@ try:
         if read != val:
             val = read
 finally:
-    print "clean up."
+    print("clean up.")
     GPIO.cleanup()

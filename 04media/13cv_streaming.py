@@ -13,7 +13,7 @@ if r:
     
     r, enc = cv2.imencode('.png', data)
     b64 = base64.encodestring(enc)
-    print b64
+    print(b64)
 #frame = cam.read()[1]
 #cnt = cv2.imencode('.png',frame)[1]
 #b64 = base64.encodestring(cnt)

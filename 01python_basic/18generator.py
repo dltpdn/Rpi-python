@@ -5,4 +5,4 @@ def generator():
         cnt+= 1
 
 for x in generator():
-    print x
+    print(x)

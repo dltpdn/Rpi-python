@@ -1,13 +1,12 @@
 from abc import abstractmethod, ABCMeta
-class Abstract:
-    __metaclass__ = ABCMeta
+class Abstract(metaclass=ABCMeta):
     @abstractmethod
     def method(self):
         pass
     
 class Concrete(Abstract):
     def method(self):
-        print 'This is concrete class'
+        print('This is concrete class')
 
 #abs = Abstract() #error
 con = Concrete()

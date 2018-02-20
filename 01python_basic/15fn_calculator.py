@@ -22,24 +22,24 @@ def str2num(str_val):
 
 def shell():
     operators = {'+' : plus, '-':minus, '*':multiply, '/':divide}
-    print "Calculator is ready.('q' to quit)"
+    print("Calculator is ready.('q' to quit)")
     while True:
         isDone = False
-        line = raw_input("> ")
+        line = input("> ")
         line.strip()
         if 'q' in line :
             break
-        for op in operators.keys():
+        for op in list(operators.keys()):
             op_idx = line.find(op)
             if op_idx > 0 and op_idx < len(line)-1:
                 fn = operators[op]
                 a = str2num(line[:op_idx])
                 b = str2num(line[op_idx+1:])
-                print line , '=', fn(a,b)
+                print(line , '=', fn(a,b))
                 isDone = True
                 break
         if not isDone :
-            print 'Invalid expression, Try again.'
+            print('Invalid expression, Try again.')
     
 
 shell()

@@ -5,14 +5,14 @@ class Methods:
     
     @staticmethod
     def static_m():
-        print "static_method"
+        print("static_method")
     
     @classmethod
     def class_m(cls):
-        print cls.value
+        print(cls.value)
 
     def instance_m(self):
-        print self.name
+        print(self.name)
     
 Methods.static_m()
 Methods.class_m()

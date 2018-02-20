@@ -1,2 +1,2 @@
 def say():
-    print 'meow~ meow~'
+    print('meow~ meow~')

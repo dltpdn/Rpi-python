@@ -1,4 +1,4 @@
-score = input("Inser your score:")
+score = eval(input("Inser your score:"))
 
 if score >= 90:
 	credit = 'A'
@@ -11,4 +11,4 @@ elif score >= 60:
 else:
 	credit = 'F'
 
-print "Your credit is %s" % credit
+print("Your credit is %s" % credit)

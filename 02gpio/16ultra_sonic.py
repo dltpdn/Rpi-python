@@ -14,7 +14,7 @@ try:
     
     while True:
         GPIO.output(trig_pin, False)
-        print "ready for mesurement."
+        print("ready for mesurement.")
         time.sleep(0.2)
         GPIO.output(trig_pin, True)
         time.sleep(0.00001)  #set HIGH for 10us
@@ -26,7 +26,7 @@ try:
         travel_time = end_time - start_time;
         distance = travel_time * 17150 #32300/2
         distance = round(distance, 2)
-        print 'Distance:%dcm' %distance
+        print('Distance:%dcm' %distance)
 finally:
-    print 'Clean up'
+    print('Clean up')
     GPIO.cleanup()                

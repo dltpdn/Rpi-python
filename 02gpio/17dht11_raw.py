@@ -101,7 +101,7 @@ def isDataValid():
     global Temperature
     global crc
     
-    print "isDataValid(): H=%d, T=%d, crc=%d"% (int(Humidity), int(Temperature), int(bin2dec(crc)))
+    print("isDataValid(): H=%d, T=%d, crc=%d"% (int(Humidity), int(Temperature), int(bin2dec(crc))))
     if int(Humidity) + int(Temperature) == int(bin2dec(crc)):
         return True;
     else:
@@ -110,8 +110,8 @@ def printData():
     global Humidity
     global Temperature
     
-    print "H: "+Humidity
-    print "T: "+Temperature
+    print("H: "+Humidity)
+    print("T: "+Temperature)
    
     
 while (not crc_OK):
@@ -119,7 +119,7 @@ while (not crc_OK):
     analyzeData();
     if (isDataValid()):
         crc_OK=True;
-        print "\r",
+        print("\r", end=' ')
         printData();
     else:
         sys.stderr.write(".")

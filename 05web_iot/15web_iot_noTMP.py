@@ -25,22 +25,22 @@ def main():
 @app.route('/monitor')
 def monitoring():
     try:
-        print '/monitor'
+        print('/monitor')
         humidity, temperature = 0,0 #Adafruit_DHT.read_retry(sensor, pin_dht11)
         obj = {'humi' : humidity, 'temp' : temperature}
         return json.dumps(obj)
     except Exception as e:
-        print 'err', e
+        print('err', e)
 
 @app.route('/operate/<cmd>')
 def op(cmd):
     val = request.values['val']   
     if cmd == "led":
         val = request.values['val']   
-        print '/operate/', cmd, val 
+        print('/operate/', cmd, val) 
         if val == 'on':
             GPIO.output(pin_led, True)
-            print pin_led, 'on'
+            print(pin_led, 'on')
         elif val == 'off':
             GPIO.output(pin_led, False)
         return 'OK'
@@ -57,18 +57,18 @@ class BtnThread(threading.Thread):
             val = -1
             while True :
                 if not self.flag:
-                    print 'Btn thead killed'
+                    print('Btn thead killed')
                     break
                 read = GPIO.input(pin_btn)
                 if val != read:
-                    print  val, read
+                    print(val, read)
                     val = read
                     
                     if val == 1:
                         socketio.send( {'data': '1' })
                     else:
                         socketio.send({'data': '0'})
-                        print 'btn pressed', 0
+                        print('btn pressed', 0)
                 time.sleep(0.1)
 
 if __name__ == '__main__':
@@ -77,6 +77,6 @@ if __name__ == '__main__':
         th.start()
         socketio.run(app, host='0.0.0.0')
     finally:
-        print 'cleaning up'
+        print('cleaning up')
         th.flag = False
         GPIO.cleanup()

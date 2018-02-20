@@ -4,9 +4,9 @@ class Encapsulation:
         self.__private = "private"
     
     def show(self):
-        print self.public, self.__private
+        print(self.public, self.__private)
 
 
 obj = Encapsulation()
 obj.show()
-print obj.public#, obj.__private
+print(obj.public)#, obj.__private

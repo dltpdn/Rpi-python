@@ -7,7 +7,7 @@ class MyIterator:
     def __iter__(self):
         return self
     
-    def next(self):
+    def __next__(self):
         if self.current < self.end:
             val = self.current
             self.current += 1
@@ -17,4 +17,4 @@ class MyIterator:
 
 obj = MyIterator(1, 10)
 for x in obj:
-    print x
+    print(x)

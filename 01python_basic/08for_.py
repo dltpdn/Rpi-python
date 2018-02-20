@@ -1,4 +1,4 @@
 for x in 'abcd':
-    print x
+    print(x)
 else:
-    print 'else'
+    print('else')

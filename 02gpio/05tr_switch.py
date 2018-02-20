@@ -1,12 +1,14 @@
-    pin = 18
+import RPi.GPIO as GPIO
+
+pin = 18
+
+try:
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(pin, GPIO.OUT)
     
-    try:
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(pin, GPIO.OUT)
-        
-        while True:
-            val = input("swtich [on:1, off:0]")
-            GPIO.output(pin, val)
-    finally:
-        print 'clean up'
-        GPIO.cleanup()
+    while True:
+        val = eval(input("1:on, 0:off"))
+        GPIO.output(pin, val)
+finally:
+    print('clean up')
+    GPIO.cleanup()

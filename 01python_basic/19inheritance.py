@@ -4,7 +4,7 @@ class Base:
         self.name = "base"
 
     def show(self):
-        print self.name
+        print(self.name)
 
 class Derived(Base):
     def __init__(self):
@@ -20,7 +20,7 @@ class Base2(object):
         self.name = "Base2"
 
     def show(self):
-        print self.name
+        print(self.name)
 
 class Derived2(Base2):
     def __init__(self):

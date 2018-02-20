@@ -11,8 +11,8 @@ try:
         read = GPIO.input(pin)
         if read != val:
             val = read
-            print time.strftime("%Y%m%d-%H%M%S"), val
+            print(time.strftime("%Y%m%d-%H%M%S"), val)
         #time.sleep(0.1)
 finally:
-    print "clean up."
+    print("clean up.")
     GPIO.cleanup()
